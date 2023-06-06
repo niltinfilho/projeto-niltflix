@@ -1,0 +1,133 @@
+:root {
+  --regular-gray: #141414;
+
+  --regular-size: 14px;
+
+  --light-weight: 300;
+  --regular-weight: 400;
+  --medium-weight: 700;
+  --bold-weight: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #e5e5e5;
+  font-family: 'NetflixSans';
+  font-weight: var(--regular-weight);
+  line-height: 1.2;
+}
+
+@font-face {
+  font-family: 'NetflixSans';
+  src: url(/assets/fonts/NetflixSans-Bold.otf);
+}
+
+@font-face {
+  font-family: 'NetflixSans';
+  src: url(/assets/fonts/NetflixSans-Medium.otf);
+}
+
+@font-face {
+  font-family: 'NetflixSans';
+  src: url(/assets/fonts/NetflixSans-Regular.otf);
+}
+
+@font-face {
+  font-family: 'NetflixSans';
+  src: url(/assets/fonts/NetflixSans-Light.otf);
+}
+
+@keyframes turn-perfil-arrow {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+body {
+  background-color: var(--regular-gray);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  width: 96%;
+  margin: auto;
+}
+
+.header {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.header-left, .header-right {
+  gap: 30px;
+  align-items: center;
+}
+
+.header-logo {
+  width: 15%;
+}
+
+.header-logo img {
+  width: 100%;
+}
+
+.main-menu-list {
+  gap: 10px;
+}
+
+.main-menu-list-item {
+  font-family: 'NetflixSans';
+  font-size: 14px;
+  font-weight: medium;
+}
+
+.main-menu-list-item a:hover {
+  color:#b3b3b3;
+}
+
+.header-perfil {
+  /* width: 20%; */
+  align-items: center;
+  gap: 10px;
+}
+
+.header-perfil-icon {
+  width: 40%;
+}
+
+.header-perfil img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.ph-caret-down::before {
+  font-size: 12px;
+  line-height: 12px;
+  transition: transform .2s linear;
+}
+
+.header-perfil:hover .ph-caret-down {
+  animation-name: turn-perfil-arrow;
+  animation-duration: .5s;
+}
+
+ 
